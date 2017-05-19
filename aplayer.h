@@ -42,7 +42,7 @@ int aplayer(WINDOW *m){
 			case 10:
 				choice=hl;
 			break;
-				case KEY_F(10):
+				case KEY_F(10): //SELECCIONA UNA CANCION RANDOM
                                 hl=rand()%8;
                                 choice=hl;
                         break;
