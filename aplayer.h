@@ -15,7 +15,7 @@ int n_choices=6;
 void menu(WINDOW *c,int op);
 int aplayer(WINDOW *m){
 		int hl=1,choice=0,xx,yy,c;	
-		
+		int ra=0;
 		getmaxyx(stdscr,yy,xx);
 		
 		keypad(m,TRUE);
@@ -42,6 +42,11 @@ int aplayer(WINDOW *m){
 			case 10:
 				choice=hl;
 			break;
+				case KEY_F(10):
+                                hl=rand()%8;
+                                choice=hl;
+                        break;
+
 			default: refresh();
 			break;
 		}
